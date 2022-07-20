@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+    <table>
+      <thead>
+        Messages
+      </thead>
+      <tbody>
+        <% for(msg of messages) { %>
+        <tr>
+          <td><%= msg.text %></td>
+          <td><%= msg.user %></td>
+          <td><%= msg.added %></td>
+        </tr>
+        <% } %>
+      </tbody>
+    </table>
+    <a href="/new">New Message</a>
+  </body>
+</html>
